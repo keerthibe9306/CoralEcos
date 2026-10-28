@@ -1,0 +1,45 @@
+
+# data science
+numpy<2.0.0
+pandas==2.2.3
+matplotlib==3.8.4
+
+
+# Uncomment if you use sklearn
+scikit-learn==1.6.1
+
+# Install the correct TensorFlow version
+# Uncomment if you use TensorFlow
+tensorflow==2.16.2    # For both Intel and Apple silicon
+keras==3.8.0
+
+# Google Cloud
+# Uncomment if you use Google Cloud Storage
+#google-cloud-storage
+
+# API
+fastapi
+uvicorn
+python-multipart
+altair
+
+
+#Project_logic
+split-folders==0.5.1
+dill
+opencv-python-headless
+Pillow
+pydantic
+geopandas
+pydap
+xarray
+scipy
+pyproj
+shapely
+requests
+
+
+# Trick to install the version of Tensorflow depending on your processor: darwin == Mac, ARM == M1
+tensorflow-macos; sys_platform == 'darwin' and 'ARM' in platform_version # Mac M-chips
+tensorflow; sys_platform == 'darwin' and 'ARM' not in platform_version # Mac Intel chips
+tensorflow; sys_platform != 'darwin' # Windows & Ubuntu Intel chips
